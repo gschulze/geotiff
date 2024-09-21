@@ -15,9 +15,9 @@ fn test_load_marbles() {
     assert_eq!(geotiff.raster_width, 1419);
     assert_eq!(geotiff.raster_height, 1001);
     assert_eq!(geotiff.num_samples, 3);
-    assert_eq!(geotiff.get_value_at::<u8>(761, 599, 0), 147);
-    assert_eq!(geotiff.get_value_at::<u8>(761, 599, 1), 128);
-    assert_eq!(geotiff.get_value_at::<u8>(761, 599, 2), 165);
+    assert_eq!(geotiff.get_value_at::<u8>(761.0, 599.0, 0), 147);
+    assert_eq!(geotiff.get_value_at::<u8>(761.0, 599.0, 1), 128);
+    assert_eq!(geotiff.get_value_at::<u8>(761.0, 599.0, 2), 165);
 }
 
 #[test]
@@ -28,9 +28,9 @@ fn test_load_zh_dem_25() {
     assert_eq!(geotiff.raster_width, 399);
     assert_eq!(geotiff.raster_height, 366);
     assert_eq!(geotiff.num_samples, 1);
-    assert_eq!(geotiff.get_value_at::<i16>(0, 0, 0), 551);
-    assert_eq!(geotiff.get_value_at::<i16>(67, 45, 0), 530);
-    assert_eq!(geotiff.get_value_at::<i16>(325, 142, 0), 587);
+    assert_eq!(geotiff.get_value_at::<i16>(0.0, 0.0, 0), 551);
+    assert_eq!(geotiff.get_value_at::<i16>(67.0, 45.0, 0), 530);
+    assert_eq!(geotiff.get_value_at::<i16>(325.0, 142.0, 0), 587);
 
     assert_eq!(
         geotiff.geo_key_directory,
